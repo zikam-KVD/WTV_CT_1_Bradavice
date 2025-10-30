@@ -1,10 +1,24 @@
 <?php
 
+use App\Models\House;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $koleje = House::all();
+
+    return view('welcome', ['colleges' => $koleje]);
 })->name('index');
 
 
 Route::view('/information', 'video')->name("videoHarry");
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
