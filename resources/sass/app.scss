@@ -1,0 +1,32 @@
+$footerHeight: 70px;
+
+body {
+
+    & > div {
+        min-height: calc(100vh - $footerHeight);
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+
+    //todo - dodelat
+    & > div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $footerHeight;
+
+        div {
+            gap: 20px;
+        }
+    }
+}

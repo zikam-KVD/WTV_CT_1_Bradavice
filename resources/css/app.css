@@ -5,3 +5,35 @@
 [x-cloak] {
     display: none;
 }
+
+.kolej {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding-bottom: 15px;      
+}
+
+.kolej .progress {
+    height: 200px;
+    width: 80px;
+    background-color: gainsboro;
+    /*display: flex;
+    align-items: end;*/
+    position: relative;
+
+}
+
+#koleje-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-body {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.kolej img {
+    max-width: 40%;
+}
