@@ -36,4 +36,5 @@ Route::middleware([
     //uprava koleje
     Route::post('/house/edit/{id}', [HouseController::class, 'editHouse'])->name('admin.house.edit');
 
+    Route::get('/points', [HouseController::class, 'showPoints'])->name('admin.points');
 });

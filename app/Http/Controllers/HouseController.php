@@ -41,4 +41,12 @@ class HouseController extends Controller
     }
 
     //mazani
+
+    /**
+     * sablona pro bodovani koleji
+     */
+    public function showPoints()
+    {
+        return view('points');
+    }
 }
